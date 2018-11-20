@@ -3,7 +3,10 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar></mat-toolbar>
+    <mat-toolbar>
+
+      <img src="http://www.magnumsolutions.in/wp-content/uploads/2018/06/magnum-logo.png"/>
+    </mat-toolbar>
 
     <mat-accordion>
       <mat-expansion-panel>
@@ -45,7 +48,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Magnum Solutions</span>
+      <span></span>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
