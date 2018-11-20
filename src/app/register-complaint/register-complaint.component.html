@@ -1,59 +1,81 @@
 
 <form class="margin-space">
-  <div class="row">
-    <div class="col-sm-5">
-        <div class="example-container">
-            <mat-form-field>
-              <input matInput placeholder="Client Name">
-            </mat-form-field>
-           
-            <mat-form-field>
-              <mat-select placeholder="Type of Call">
-                <mat-option value="option">Service Call</mat-option>
-                <mat-option value="option">AMC Call</mat-option>
-                <mat-option value="option">Check Visit</mat-option>
-              </mat-select>
-            </mat-form-field>
-
-            <mat-form-field>
-                <textarea matInput placeholder="Remarks"></textarea>
-              </mat-form-field>
-          </div>
-    </div>
-
-
-    <div class="col-sm-5">
       <div class="example-container">
-          <mat-form-field class="example-full-width">
-              <input matInput [matDatepicker]="picker" placeholder="Complain Date">
-              <mat-datepicker-toggle matSuffix [for]="picker">
-                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-              </mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
+          <mat-form-field>
+            <input matInput placeholder="Client Name">
+          </mat-form-field>
+         
+          <mat-form-field>
+            <mat-select placeholder="Type of Call">
+              <mat-option value="option">Service Call</mat-option>
+              <mat-option value="option">AMC Call</mat-option>
+              <mat-option value="option">Check Visit</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <mat-form-field>
+            <input matInput placeholder="Nature of Call">
+          </mat-form-field>
+          <mat-form-field>
+
+              <textarea matInput placeholder="Remarks"></textarea>
             </mat-form-field>
 
 
-            <mat-form-field>
-                <mat-select placeholder="Assigned To">
-                  <mat-option value="option">Santosh</mat-option>
-                  <mat-option value="option">Kazi</mat-option>
-                  <mat-option value="option">Dinesh</mat-option>
-                </mat-select>
-              </mat-form-field>
-
-              <mat-form-field>
-                  <input matInput placeholder="Charges">
-                </mat-form-field>
-    
+            <mat-grid-list cols="2" rowHeight="100px">
+                <mat-grid-tile>
+                    <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="picker" placeholder="Complain Date">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>      
+                </mat-grid-tile>
+            
+                <mat-grid-tile>
+                  <mat-form-field>
+                    <mat-select placeholder="Assigned To">
+                        <mat-option value="option">Santosh</mat-option>
+                        <mat-option value="option">Kazi</mat-option>
+                        <mat-option value="option">Dinesh</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+           
+            
+              
+                <mat-form-field>
+                    <input matInput placeholder="Charges">
+                  </mat-form-field>
   
-          
-      </div>
-          
-    </div>
+                  <mat-form-field>
+                      <mat-select placeholder="Status">
+                        <mat-option value="option">Open</mat-option>
+                        <mat-option value="option">Processing</mat-option>
+                        <mat-option value="option">Waiting for RMA</mat-option>
+                        <mat-option value="option">Pending</mat-option>
+                        <mat-option value="option">closed</mat-option>
+                      </mat-select>
+                    </mat-form-field>
 
 
-  </div>
-    
+                    <mat-grid-list cols="1" rowHeight="50px">
+                        <mat-grid-tile>
+                            <button class="btn waves-effect waves-light button-class" type="submit" name="action">Submit
+                              </button>
+                            
+                              <button class="btn waves-effect waves-light button-cancel" type="submit" name="action">Cancel
+                                </button>
+              
+                  
+                  
+                        </mat-grid-tile>
+                        
+                      </mat-grid-list>
+        </div>
       
   </form>
   

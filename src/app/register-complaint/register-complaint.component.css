@@ -14,4 +14,15 @@
   form {
     text-align: center;
   }
-  
+
+ .button-class{
+   background-color: green;
+   color:white;
+   margin: 10px;
+ }
+
+ .button-cancel{
+   background-color: red;
+   color: white;
+   margin: 10px;
+ }

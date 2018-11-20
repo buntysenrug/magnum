@@ -17,6 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegisterComplaintComponent } from './register-complaint/register-complaint.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterClientComponent } from './register-client/register-client.component';
+import {ButtonModule} from 'primeng/button';
+
 
 
 
@@ -63,7 +65,8 @@ const appRoutes: Routes = [
     MatOptionModule,
     FormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ButtonModule
 
 
   ],
