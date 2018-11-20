@@ -19,6 +19,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterClientComponent } from './register-client/register-client.component';
 import {ButtonModule} from 'primeng/button';
 
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import {
+  CalendarEvent,
+  CalendarEventAction,
+  CalendarEventTimesChangedEvent,
+  CalendarView
+} from 'angular-calendar';
+
+
+import { ComplaintCalendarComponent } from './complaint-calendar/complaint-calendar.component';
+
 
 
 
@@ -27,8 +39,10 @@ import {ButtonModule} from 'primeng/button';
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   {path:'register-complaint',component:RegisterComplaintComponent},
-  {path:'register-client',component:RegisterClientComponent}
+  {path:'register-client',component:RegisterClientComponent},
+  {path:'complaint-calendar',component:ComplaintCalendarComponent}
 ];
+
 
 
 @NgModule({
@@ -37,7 +51,8 @@ const appRoutes: Routes = [
     SideNavComponent,
     DashboardComponent,
     RegisterComplaintComponent,
-    RegisterClientComponent
+    RegisterClientComponent,
+    ComplaintCalendarComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -66,7 +81,11 @@ const appRoutes: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    ButtonModule
+    ButtonModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
 
 
   ],
