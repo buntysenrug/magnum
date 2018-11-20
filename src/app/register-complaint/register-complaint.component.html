@@ -1,0 +1,65 @@
+
+<form class="margin-space">
+  <div class="row">
+    <div class="col-sm-5">
+        <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Client Name">
+            </mat-form-field>
+           
+            <mat-form-field>
+              <mat-select placeholder="Type of Call">
+                <mat-option value="option">Service Call</mat-option>
+                <mat-option value="option">AMC Call</mat-option>
+                <mat-option value="option">Check Visit</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Remarks"></textarea>
+              </mat-form-field>
+          </div>
+    </div>
+
+
+    <div class="col-sm-5">
+      <div class="example-container">
+          <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" placeholder="Complain Date">
+              <mat-datepicker-toggle matSuffix [for]="picker">
+                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <mat-select placeholder="Assigned To">
+                  <mat-option value="option">Santosh</mat-option>
+                  <mat-option value="option">Kazi</mat-option>
+                  <mat-option value="option">Dinesh</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                  <input matInput placeholder="Charges">
+                </mat-form-field>
+    
+  
+          
+      </div>
+          
+    </div>
+
+
+  </div>
+    
+      
+  </form>
+  
+
+
+
+
+
+  

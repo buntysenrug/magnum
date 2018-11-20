@@ -1,0 +1,17 @@
+.margin-space{
+    margin: 15px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 80%;
+  }
+  
+  form {
+    text-align: center;
+  }
+  

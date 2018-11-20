@@ -1,0 +1,26 @@
+
+
+.font-size{
+    font-size: 50px;
+    padding: 20px;
+}
+
+mat-card{
+    margin-top:10px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border-color: indigo;
+    border-width: 10px;
+}
+
+mat-card-content{
+    margin: 0px;
+    padding: 0px;
+}
+
+mat-card-actions{
+    margin: 0px;
+    padding: 0px;
+}
